@@ -12,15 +12,20 @@ public class Player : MonoBehaviour
     public float jumpForce = 10f;
     private bool isJumping = false;
 
-    void Start()
+    private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        // it is better here because the control can fail in some moments
+        Control();
+    }
+
     private void FixedUpdate()
     {
-        Control();
         AutoMovement();
     }
 
@@ -33,7 +38,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Control()
+    private void Control()
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
@@ -43,7 +48,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void AutoMovement()
+    private void AutoMovement()
     {
         rigidBody.velocity = new Vector2(moveSpeed, rigidBody.velocity.y);
     }
