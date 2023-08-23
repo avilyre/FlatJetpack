@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigidBody;
     private Animator animator;
 
-    public float moveSpeed = 3f;
-    public float jumpFoce = 10f;
+    public float moveSpeed = 5f;
+    public float jumpForce = 10f;
     private bool isJumping = false;
 
     void Start()
@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
-            rigidBody.AddForce(new Vector2(0f, jumpFoce), ForceMode2D.Impulse);
+            rigidBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             animator.SetBool("Jumping", true);
             isJumping = true;
         }
