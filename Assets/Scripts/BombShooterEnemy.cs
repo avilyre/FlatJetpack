@@ -10,10 +10,6 @@ public class BombShooterEnemy : MonoBehaviour
     public float shootTime = 2f;
     private float gameTime;
 
-    void Start()
-    {
-        
-    }
     void Update()
     {
         gameTime += Time.deltaTime;

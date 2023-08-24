@@ -15,9 +15,4 @@ public class Bomb : MonoBehaviour
         rigidBody.AddForce(new Vector2(xAxis, yAxis), ForceMode2D.Impulse);
         Destroy(gameObject, 2f);
     }
-
-    void Update()
-    {
-        
-    }
 }

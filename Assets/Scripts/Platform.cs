@@ -5,13 +5,5 @@ using UnityEngine;
 public class Platform : MonoBehaviour
 {
     public GameObject EndPlatform;
-
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
+    public SpawnEnemiesPlatform spawnEnemies;
 }

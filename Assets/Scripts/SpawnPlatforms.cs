@@ -63,5 +63,12 @@ public class SpawnPlatforms : MonoBehaviour
     {
         platform.transform.position = new Vector2(platformOffset, transform.position.y);
         platformOffset += 30;
+
+        bool hasSpawnEnemy = platform.GetComponent<Platform>().spawnEnemies != null;
+
+        if (hasSpawnEnemy)
+        {
+            platform.GetComponent<Platform>().spawnEnemies.RespawnEnemy();
+        }
     }
 }
