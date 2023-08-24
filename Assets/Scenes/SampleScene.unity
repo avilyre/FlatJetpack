@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 879095712}
   - component: {fileID: 879095713}
   m_Layer: 0
-  m_Name: Spawn Enemies
+  m_Name: Spawn Flier Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -432,9 +432,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnTime: 5
   enemies:
+  - {fileID: 2291537111532470948, guid: eb2f0c61e928b954992eae900f9a4bdf, type: 3}
   - {fileID: 7611587734835944374, guid: c3330861f369afb468a1fd34890e0cdc, type: 3}
   - {fileID: 8331979539971540714, guid: 4a570745ecb324e41a10affc62b0c290, type: 3}
-  - {fileID: 2291537111532470948, guid: eb2f0c61e928b954992eae900f9a4bdf, type: 3}
 --- !u!1 &1806742612
 GameObject:
   m_ObjectHideFlags: 0

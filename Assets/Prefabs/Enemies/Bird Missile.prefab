@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8331979539971540718}
   - component: {fileID: 8331979539971540713}
-  - component: {fileID: 8331979539971540715}
   - component: {fileID: 8583304609871754683}
   - component: {fileID: 194913820512827195}
   - component: {fileID: -2825990682965867270}
+  - component: {fileID: 4348330345977689059}
   m_Layer: 0
   m_Name: Bird Missile
   m_TagString: Untagged
@@ -88,19 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8331979539971540715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8331979539971540714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f214fec2191814b860c0e8fa4357c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
 --- !u!58 &8583304609871754683
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -159,3 +146,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4348330345977689059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8331979539971540714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f214fec2191814b860c0e8fa4357c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
