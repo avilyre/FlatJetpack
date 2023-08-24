@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.U2D.Path.GUIFramework;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerControl : MonoBehaviour
 {
     public GameObject bullet;
     public GameObject firePoint;

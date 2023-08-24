@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnEnemies : MonoBehaviour
+public class SpawnFlierEnemy : MonoBehaviour
 {
     private float gameTime = 0;
     public float spawnTime = 5f;

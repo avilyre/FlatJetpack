@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BombShooterEnemy : MonoBehaviour
+public class BombShooter : MonoBehaviour
 {
     public GameObject firePoint;
     public GameObject projectile;
