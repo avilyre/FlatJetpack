@@ -6,6 +6,7 @@ public class SpawnEnemiesPlatform : MonoBehaviour
 {
     public GameObject enemy;
     private GameObject spawnedEnemy;
+    private GameObject spawnPoint;
 
     public List<GameObject> spawnPoints = new List<GameObject>();
 
@@ -19,12 +20,15 @@ public class SpawnEnemiesPlatform : MonoBehaviour
         if (spawnedEnemy == null)
         {
             SpawnEnemy();
+        } else
+        {
+            spawnedEnemy.transform.position = spawnPoint.transform.position;
         }
     }
 
     private void SpawnEnemy()
     {
-        GameObject spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
+        spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
         spawnedEnemy = Instantiate(enemy, spawnPoint.transform.position, spawnPoint.transform.rotation);
     }
 }
