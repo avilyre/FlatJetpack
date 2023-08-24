@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameObject bullet;
+    public GameObject firePoint;
     private Rigidbody2D rigidBody;
     private Animator animator;
 
@@ -45,6 +47,11 @@ public class Player : MonoBehaviour
             rigidBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             animator.SetBool("Jumping", true);
             isJumping = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
         }
     }
 
