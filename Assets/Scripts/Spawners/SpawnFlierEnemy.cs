@@ -22,6 +22,6 @@ public class SpawnFlierEnemy : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        Instantiate(enemies[Random.Range(0, enemies.Count)], transform.position + new Vector3(0f, Random.Range(0f, 3f), 0f), transform.rotation);
+        Instantiate(enemies[Random.Range(0, enemies.Count)], transform.position + new Vector3(0f, Random.Range(-3f, 1.30f), 0f), transform.rotation);
     }
 }

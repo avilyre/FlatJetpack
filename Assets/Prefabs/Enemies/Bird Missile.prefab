@@ -160,4 +160,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 5
-  moveSpeed: 8
+  moveSpeed: 2
