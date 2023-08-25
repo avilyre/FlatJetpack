@@ -49,7 +49,7 @@ public class PlayerControl : MonoBehaviour
             isJumping = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.RightShift))
         {
             Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
         }
