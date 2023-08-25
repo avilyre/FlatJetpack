@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8547652620516094898}
   m_Layer: 0
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,5 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9d6ceb10e151845b0bd6cae6459a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 3
+  damage: 1
   xAxis: -5
   yAxis: 6

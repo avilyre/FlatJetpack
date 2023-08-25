@@ -137,5 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
-  damage: 5
+  damage: 1
   feedbackEffect: {fileID: 5659379080827069354, guid: 62a6597653a63df4f8660651aca8f1ee, type: 3}

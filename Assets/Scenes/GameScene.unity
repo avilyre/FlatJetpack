@@ -770,6 +770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7186099586822425844, guid: 29556aa40b0d6d04fbb3b5f08c3393f0, type: 3}
   firePoint: {fileID: 2142252438}
+  health: 1
   moveSpeed: 5
   jumpForce: 10
 --- !u!95 &566436412
@@ -1254,7 +1255,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1117866322}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1919071824}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1117866322
 MonoBehaviour:
   m_ObjectHideFlags: 0

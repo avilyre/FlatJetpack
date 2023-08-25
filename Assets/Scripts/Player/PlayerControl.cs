@@ -10,6 +10,7 @@ public class PlayerControl : MonoBehaviour
     private Rigidbody2D rigidBody;
     private Animator animator;
 
+    public int health = 3;
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     private bool isJumping = false;
@@ -58,5 +59,24 @@ public class PlayerControl : MonoBehaviour
     private void AutoMovement()
     {
         rigidBody.velocity = new Vector2(moveSpeed, rigidBody.velocity.y);
+    }
+
+    public void ReceiveDamage(int receivedDamage)
+    {
+        health -= receivedDamage;
+
+        if (health <= 0)
+        {
+            GameController.instance.ShowGameOver();
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Enemy bombProjectile = collision.gameObject.GetComponent<Enemy>();
+            ReceiveDamage(bombProjectile.damage);
+        }
     }
 }
