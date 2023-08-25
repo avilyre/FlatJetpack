@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public int damage = 5;
 
     private Rigidbody2D rigidBody;
+    public GameObject feedbackEffect;
 
     void Start()
     {
@@ -18,5 +19,20 @@ public class Bullet : MonoBehaviour
     void FixedUpdate()
     {
         rigidBody.velocity = Vector2.right * moveSpeed;
+    }
+
+    public void OnHit()
+    {
+        GameObject feedbackEffectInstantiated = Instantiate(feedbackEffect, transform.position, transform.rotation);
+        Destroy(gameObject);
+        Destroy(feedbackEffectInstantiated, 0.4f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            OnHit();
+        }
     }
 }

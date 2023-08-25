@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             int receivedDamage = collision.GetComponent<Bullet>().damage;
+            collision.GetComponent<Bullet>().OnHit();
             ReceiveDamage(receivedDamage);
 
             HealthChecker();
