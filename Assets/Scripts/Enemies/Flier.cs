@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Flier : MonoBehaviour
+public class Flier : Enemy
 {
     private Rigidbody2D rigidBody;
     public float moveSpeed = 3f;

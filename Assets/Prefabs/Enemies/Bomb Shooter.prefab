@@ -115,6 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76337c1951ed3542a4d840106a18551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 15
+  damage: 5
   firePoint: {fileID: 2295805108461102896}
   projectile: {fileID: 8547652620516094897, guid: 37cd3bb66ed053d40b02ee9eeb9dc248, type: 3}
   shootTime: 2
