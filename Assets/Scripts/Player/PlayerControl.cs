@@ -41,24 +41,38 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    private void AutoMovement()
+    {
+        rigidBody.velocity = new Vector2(moveSpeed, rigidBody.velocity.y);
+    }
+
     private void Control()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.RightShift))
+        {
+            OnShoot();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OnJump();
+        }
+    }
+
+    public void OnJump()
+    {
+        if (!isJumping)
         {
             rigidBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             animator.SetBool("Jumping", true);
             isJumping = true;
         }
-
-        if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.RightShift))
-        {
-            Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
-        }
     }
 
-    private void AutoMovement()
+    public void OnShoot()
     {
-        rigidBody.velocity = new Vector2(moveSpeed, rigidBody.velocity.y);
+        Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
+        
     }
 
     public void ReceiveDamage(int receivedDamage)
